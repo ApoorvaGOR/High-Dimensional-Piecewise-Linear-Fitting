@@ -1,0 +1,10 @@
+{
+  "source_zip_integrity": "passed",
+  "no_virtual_environment_or_caches": true,
+  "unpacked_smoke_other_working_directory": "passed",
+  "offline_zip_integrity": "passed",
+  "offline_workbook_sha256": "all three matched",
+  "same_data_across_settings": "passed",
+  "direct_residual_checks": "passed",
+  "automated_tests_passed": 12
+}

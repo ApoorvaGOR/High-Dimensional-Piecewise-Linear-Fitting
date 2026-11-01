@@ -1,0 +1,32 @@
+{
+  "era5": {
+    "repository": "https://github.com/ApoorvaGOR/ERA5-Regional-Temperature",
+    "commit": "4b842780c1c804193fb7dd88cfdc469d0a7c2185",
+    "path": "data/annual/ERA5_Annual_Temperature_1940_2025.xlsx",
+    "filename": "ERA5_Annual_Temperature_1940_2025.xlsx",
+    "url": "https://raw.githubusercontent.com/ApoorvaGOR/ERA5-Regional-Temperature/4b842780c1c804193fb7dd88cfdc469d0a7c2185/data/annual/ERA5_Annual_Temperature_1940_2025.xlsx",
+    "sha256": "0cf9e80fc0159e265c1bbd755562bd8bc263c7cbe287fe075b27558a16e58f32",
+    "git_blob_sha1": "965ae59e3def37348f9f9ea93a4006e411b95f30",
+    "bytes": 26132055
+  },
+  "holoassist": {
+    "repository": "https://github.com/ApoorvaGOR/HoloAssist-Hand-Sample",
+    "commit": "271dba3ed6b8ff2fbd4399949ca12ebdd99c9f61",
+    "path": "sample/hand_tracking.xlsx",
+    "filename": "hand_tracking.xlsx",
+    "url": "https://raw.githubusercontent.com/ApoorvaGOR/HoloAssist-Hand-Sample/271dba3ed6b8ff2fbd4399949ca12ebdd99c9f61/sample/hand_tracking.xlsx",
+    "sha256": "0227ec42ba0f624dca45e76a0751bef167fb9de857f8d409abbd14498ac992c7",
+    "git_blob_sha1": "39c24e0e5bea05af80124d9fef51e2d7f957c6c8",
+    "bytes": 5973736
+  },
+  "cmapss": {
+    "repository": "https://github.com/ApoorvaGOR/C-MAPSS-Turbofan-Data",
+    "commit": "8707e6363862141eb7e537b2a8036013e6b43df3",
+    "path": "data/NASA_FD001_sensor_by_cycle.xlsx",
+    "filename": "NASA_FD001_sensor_by_cycle.xlsx",
+    "url": "https://raw.githubusercontent.com/ApoorvaGOR/C-MAPSS-Turbofan-Data/8707e6363862141eb7e537b2a8036013e6b43df3/data/NASA_FD001_sensor_by_cycle.xlsx",
+    "sha256": "1febe10f441f4a475cc9d3fc479fcf06cca7afa1897c0b4dcc1ef4d8ffdeef4c",
+    "git_blob_sha1": "439c163c960c98e442e32a400563182fbaecc690",
+    "bytes": 3851388
+  }
+}

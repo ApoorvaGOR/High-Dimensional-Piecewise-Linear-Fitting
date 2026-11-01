@@ -1,0 +1,17 @@
+test_cmapss_engine1_sensors_and_rul_axis (test_datasets.DatasetTests.test_cmapss_engine1_sensors_and_rul_axis) ... ok
+test_era5_all_locations_and_requested_years (test_datasets.DatasetTests.test_era5_all_locations_and_requested_years) ... ok
+test_holoassist_full_horizon_and_repeats (test_datasets.DatasetTests.test_holoassist_full_horizon_and_repeats) ... ok
+test_pinned_checksums (test_datasets.DatasetTests.test_pinned_checksums) ... ok
+test_affine_coordinates_and_response_offsets (test_methodology.MethodologyTests.test_affine_coordinates_and_response_offsets) ... ok
+test_big_m_and_bounds (test_methodology.MethodologyTests.test_big_m_and_bounds) ... ok
+test_dense_equals_sparse_k_J (test_methodology.MethodologyTests.test_dense_equals_sparse_k_J) ... ok
+test_exhaustive_support_oracle (test_methodology.MethodologyTests.test_exhaustive_support_oracle) ... ok
+test_noiseless_interior_knot (test_methodology.MethodologyTests.test_noiseless_interior_knot) ... ok
+test_repeated_times_keep_distinct_readings (test_methodology.MethodologyTests.test_repeated_times_keep_distinct_readings) ... ok
+test_ties_constants_and_coincident_crossings (test_methodology.MethodologyTests.test_ties_constants_and_coincident_crossings) ... ok
+test_missing_input_is_reported (test_minlp_worker.WorkerTests.test_missing_input_is_reported) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 30.860s
+
+OK

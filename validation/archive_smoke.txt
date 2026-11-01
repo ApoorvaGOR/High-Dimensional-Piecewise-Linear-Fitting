@@ -1,0 +1,9 @@
+Results: /private/var/folders/m2/lkp_y2fx0l19nltwdzz3m88w0000gn/T/slope-release-check-ib75ruv9/results
+MINLP limit=2s; J cap=0 (0=none)
+Starting simulated nonsparse J=5 seed=0
+MINLP simulated nonsparse J=5: limit=2s (construction excluded)
+Done simulated nonsparse J=5: exact=ok MINLP=OPTIMAL  
+Starting simulated sparse J=5 seed=0
+MINLP simulated sparse J=5: limit=2s (construction excluded)
+Done simulated sparse J=5: exact=ok MINLP=OPTIMAL  
+Completed 2 cases. Summary: /private/var/folders/m2/lkp_y2fx0l19nltwdzz3m88w0000gn/T/slope-release-check-ib75ruv9/results/final_summary.xlsx

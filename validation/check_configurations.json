@@ -1,0 +1,154 @@
+{
+  "isolated_smoke": {
+    "datasets": [
+      "simulated"
+    ],
+    "settings": [
+      "nonsparse",
+      "sparse"
+    ],
+    "n_seeds": 1,
+    "seed_start": 0,
+    "j_nonsparse": [
+      5
+    ],
+    "j_sparse": [
+      5
+    ],
+    "T": 10,
+    "sparse_fraction": 0.2,
+    "detail_max_J": 1100,
+    "data_dir": "data/raw",
+    "offline": false,
+    "output_dir": "validation/runs/isolated_smoke",
+    "threads": 1,
+    "minlp_time_limit": 2.0,
+    "minlp_threads": 1,
+    "minlp_max_J": 0,
+    "skip_minlp": false,
+    "minlp_log": false,
+    "skip_figures": true,
+    "fail_fast": false,
+    "smoke": true
+  },
+  "dense_scalability": {
+    "datasets": [
+      "simulated",
+      "era5"
+    ],
+    "settings": [
+      "nonsparse"
+    ],
+    "n_seeds": 1,
+    "seed_start": 0,
+    "j_nonsparse": [
+      10,
+      20,
+      100,
+      1000,
+      10000,
+      100000
+    ],
+    "j_sparse": [
+      10,
+      20,
+      100,
+      1000
+    ],
+    "T": 100,
+    "sparse_fraction": 0.2,
+    "detail_max_J": 1100,
+    "data_dir": "data/raw",
+    "offline": true,
+    "output_dir": "validation/runs/dense_scalability",
+    "threads": 1,
+    "minlp_time_limit": 2000.0,
+    "minlp_threads": 1,
+    "minlp_max_J": 0,
+    "skip_minlp": true,
+    "minlp_log": false,
+    "skip_figures": true,
+    "fail_fast": false,
+    "smoke": false
+  },
+  "sparse_scalability": {
+    "datasets": [
+      "simulated"
+    ],
+    "settings": [
+      "sparse"
+    ],
+    "n_seeds": 1,
+    "seed_start": 0,
+    "j_nonsparse": [
+      10,
+      20,
+      100,
+      1000,
+      10000,
+      100000
+    ],
+    "j_sparse": [
+      10,
+      20,
+      100,
+      1000
+    ],
+    "T": 100,
+    "sparse_fraction": 0.2,
+    "detail_max_J": 1100,
+    "data_dir": "data/raw",
+    "offline": false,
+    "output_dir": "validation/runs/sparse_scalability",
+    "threads": 1,
+    "minlp_time_limit": 2000.0,
+    "minlp_threads": 1,
+    "minlp_max_J": 0,
+    "skip_minlp": true,
+    "minlp_log": false,
+    "skip_figures": true,
+    "fail_fast": false,
+    "smoke": false
+  },
+  "real_data_integration": {
+    "datasets": [
+      "cmapss",
+      "holoassist"
+    ],
+    "settings": [
+      "nonsparse",
+      "sparse"
+    ],
+    "n_seeds": 1,
+    "seed_start": 0,
+    "j_nonsparse": [
+      10,
+      20,
+      100,
+      1000,
+      10000,
+      100000
+    ],
+    "j_sparse": [
+      10,
+      20,
+      100,
+      1000
+    ],
+    "T": 100,
+    "sparse_fraction": 0.2,
+    "detail_max_J": 1100,
+    "data_dir": "data/raw",
+    "offline": true,
+    "output_dir": "validation/runs/real_data_integration",
+    "threads": 1,
+    "minlp_time_limit": 2.0,
+    "minlp_threads": 1,
+    "minlp_max_J": 0,
+    "skip_minlp": false,
+    "minlp_log": false,
+    "skip_figures": true,
+    "fail_fast": false,
+    "smoke": false
+  }
+}

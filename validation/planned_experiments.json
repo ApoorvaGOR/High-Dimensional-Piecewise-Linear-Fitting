@@ -1,0 +1,146 @@
+[
+  {
+    "dataset": "simulated",
+    "setting": "nonsparse",
+    "J": 10,
+    "T": 100,
+    "seed": 0,
+    "k": 10,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "nonsparse",
+    "J": 20,
+    "T": 100,
+    "seed": 0,
+    "k": 20,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "nonsparse",
+    "J": 100,
+    "T": 100,
+    "seed": 0,
+    "k": 100,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "nonsparse",
+    "J": 1000,
+    "T": 100,
+    "seed": 0,
+    "k": 1000,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "nonsparse",
+    "J": 10000,
+    "T": 100,
+    "seed": 0,
+    "k": 10000,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "nonsparse",
+    "J": 100000,
+    "T": 100,
+    "seed": 0,
+    "k": 100000,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "sparse",
+    "J": 10,
+    "T": 100,
+    "seed": 0,
+    "k": 2,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "sparse",
+    "J": 20,
+    "T": 100,
+    "seed": 0,
+    "k": 4,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "sparse",
+    "J": 100,
+    "T": 100,
+    "seed": 0,
+    "k": 20,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "simulated",
+    "setting": "sparse",
+    "J": 1000,
+    "T": 100,
+    "seed": 0,
+    "k": 200,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "era5",
+    "setting": "nonsparse",
+    "J": 40401,
+    "T": 26,
+    "seed": 0,
+    "k": 40401,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "era5",
+    "setting": "sparse",
+    "J": 40401,
+    "T": 26,
+    "seed": 0,
+    "k": 8080,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "holoassist",
+    "setting": "nonsparse",
+    "J": 1092,
+    "T": 240,
+    "seed": 0,
+    "k": 1092,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "holoassist",
+    "setting": "sparse",
+    "J": 1092,
+    "T": 240,
+    "seed": 0,
+    "k": 218,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "cmapss",
+    "setting": "nonsparse",
+    "J": 21,
+    "T": 192,
+    "seed": 0,
+    "k": 21,
+    "minlp_time_limit": 2000.0
+  },
+  {
+    "dataset": "cmapss",
+    "setting": "sparse",
+    "J": 21,
+    "T": 192,
+    "seed": 0,
+    "k": 4,
+    "minlp_time_limit": 2000.0
+  }
+]

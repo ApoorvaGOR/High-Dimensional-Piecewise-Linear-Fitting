@@ -1,0 +1,75 @@
+NASA C-MAPSS FD001 - Data provenance and published-use information
+
+This file records the source and published licensing status of the dataset
+redistributed in this repository. It is not an official NASA license text,
+not a standardized open-data license, and not a new grant of rights.
+
+1. DATA COVERED
+
+The underlying data is the FD001 subset of the Turbofan Engine Degradation
+Simulation Data Set provided by the NASA Ames Prognostics Center of
+Excellence. This repository includes CSV exports, a reformatted Excel
+workbook, and videos and images generated from those simulated measurements.
+Repository-specific transformations are described in NOTICE.md and the
+data/README.md and video/README.md files.
+
+2. ORIGINAL SOURCES
+
+NASA dataset catalog:
+https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data
+
+NASA Prognostics Center of Excellence Data Set Repository:
+https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/
+
+Original archive used by the downloader:
+https://data.nasa.gov/docs/legacy/CMAPSSData.zip
+
+3. PUBLISHED LICENSE STATUS
+
+Checked on November 1, 2026, the NASA dataset catalog states:
+
+    License not specified
+
+No separate dataset license file was identified in the downloaded archive.
+The archive's readme provides dataset descriptions and a technical reference,
+but does not name a standardized data license.
+
+Accordingly, this repository does not represent that NASA has released this
+dataset under CDLA-Permissive-2.0, MIT, CC BY, or CC0. This file neither
+relicenses the original data nor independently establishes its copyright or
+public-domain status. Public availability of a download is not identified
+here as a substitute for an express license grant.
+
+4. ATTRIBUTION INFORMATION
+
+NASA's repository requests acknowledgment of the repository and data
+contributors in publications that use its datasets. The dataset citation is:
+
+A. Saxena and K. Goebel (2008). Turbofan Engine Degradation Simulation
+Data Set. NASA Prognostics Data Repository, NASA Ames Research Center,
+Moffett Field, CA.
+
+The original data-generation reference is:
+
+A. Saxena, K. Goebel, D. Simon, and N. Eklund (2008). Damage Propagation
+Modeling for Aircraft Engine Run-to-Failure Simulation. Proceedings of the
+International Conference on Prognostics and Health Management (PHM08),
+Denver, CO.
+
+5. PUBLISHED USE INFORMATION
+
+NASA's repository states that users bear the risk of using the data and that
+NASA and dataset donors assume no liability for the data's use or for systems
+developed using it. This is a summary; consult the original repository page
+for its published wording and any subsequent updates.
+
+This repository does not imply NASA endorsement or claim that reformatted
+data, calculated labels, or visualizations have been certified by NASA.
+
+6. SOFTWARE AND THIRD-PARTY MATERIALS
+
+No separate software license for this repository's processing scripts has
+been selected by the repository owner in this package. This data notice does
+not grant a software license. Third-party dependencies installed through
+requirements.txt retain their own licenses. This file does not extend any
+data-use status to separately copyrighted papers, logos, or other materials.

@@ -1,0 +1,7 @@
+numpy>=1.24,<3
+pandas>=2.0,<3
+numba>=0.61,<0.64
+openpyxl>=3.1,<4
+gurobipy>=11,<14
+matplotlib>=3.8,<4
+threadpoolctl>=3.2,<4

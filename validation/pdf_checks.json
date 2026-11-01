@@ -1,0 +1,18 @@
+{
+  "figures/cmapss.pdf": {
+    "pages": 1,
+    "raster_image_count": 0
+  },
+  "figures/era5.pdf": {
+    "pages": 1,
+    "raster_image_count": 0
+  },
+  "figures/holoassist.pdf": {
+    "pages": 1,
+    "raster_image_count": 0
+  },
+  "figures/simulated.pdf": {
+    "pages": 1,
+    "raster_image_count": 0
+  }
+}
