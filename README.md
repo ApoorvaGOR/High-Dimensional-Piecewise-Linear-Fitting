@@ -117,3 +117,11 @@ Tests compare small problems with exhaustive support enumeration, independent di
 | `build_release.py` | Source and optional offline ZIP packaging |
 
 Software is covered by the [MIT license](LICENSE). Third-party data retain their source terms and attribution; see [data notices](data/README.md). The software license does not relicense the datasets or the manuscript.
+
+## Acknowledgment of AI-Assisted Development
+
+We acknowledge the use of **OpenAI's ChatGPT and Codex** in assisting with the implementation, debugging, testing, documentation, and organization of the code in this repository.
+
+The **mathematical formulations, theoretical results, polynomial-time algorithms, and underlying optimization methodology** were independently derived and developed by the authors, **Apoorva Narula and Santanu S. Dey**. ChatGPT and Codex were used as software development assistants to translate these mathematical ideas into executable code and facilitate computational experiments.
+
+The authors retain full responsibility for the mathematical correctness, implementation, validation, and reported computational results.
