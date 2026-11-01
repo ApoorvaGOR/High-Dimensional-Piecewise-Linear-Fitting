@@ -11,6 +11,8 @@ import hashlib
 import json
 import os
 import urllib.request
+import truststore
+truststore.inject_into_ssl()
 
 import numpy as np
 from openpyxl import load_workbook

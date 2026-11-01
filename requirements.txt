@@ -6,3 +6,4 @@ gurobipy>=11,<14
 matplotlib>=3.8,<4
 threadpoolctl>=3.2,<4
 scipy>=1.15,<2
+truststore>=0.10
