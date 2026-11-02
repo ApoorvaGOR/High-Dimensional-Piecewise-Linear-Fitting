@@ -12,9 +12,22 @@ __pycache__/
 gurobi.lic
 .env
 data/raw/
-experiment_results_detailed/
 validation/runs/
 tmp/
 dist/
 *.egg-info/
 build/
+# Ignore everything inside experiment runs
+/experiment_results_detailed/runs/**
+
+# Allow run directories to be traversed
+!/experiment_results_detailed/runs/*/
+
+# Allow final summary Excel files
+!/experiment_results_detailed/runs/*/final_summary.xlsx
+
+# Allow runtime workbooks directories
+!/experiment_results_detailed/runs/*/runtime_workbooks/
+
+# Allow everything inside runtime workbooks
+!/experiment_results_detailed/runs/*/runtime_workbooks/**
