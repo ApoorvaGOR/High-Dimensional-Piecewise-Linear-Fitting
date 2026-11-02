@@ -31,3 +31,5 @@ build/
 
 # Allow everything inside runtime workbooks
 !/experiment_results_detailed/runs/*/runtime_workbooks/**
+
+**/.DS_Store
