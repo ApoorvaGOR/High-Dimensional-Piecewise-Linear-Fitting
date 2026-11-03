@@ -52,7 +52,7 @@ def parse_args(argv=None):
     p.add_argument('--offline', action='store_true')
     p.add_argument('--output-dir', type=Path)
     p.add_argument('--threads', type=int, default=1)
-    p.add_argument('--minlp-time-limit', type=float, default=2000.0)
+    p.add_argument('--minlp-time-limit', type=float, default=10000.0)
     p.add_argument('--minlp-threads', type=int, default=1)
     p.add_argument('--minlp-max-J', type=int, default=0, help='Optional explicit cap; 0=none')
     p.add_argument('--skip-minlp', action='store_true')
