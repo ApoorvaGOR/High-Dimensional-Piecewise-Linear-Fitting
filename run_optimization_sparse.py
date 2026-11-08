@@ -1,10 +1,14 @@
 import argparse
+import os
 import json
 import time
 from pathlib import Path
+# Apple Accelerate is not controlled by threadpoolctl. Set before NumPy loads.
+os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
 import numpy as np
 import pandas as pd
 from numba import njit, get_num_threads, set_num_threads
+from threadpoolctl import threadpool_limits
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
@@ -238,7 +242,7 @@ def _numerator_coefficients_for_support(s0, s1, support):
 # Numba implementation of F_S(z)=C-N_S(z)/D(z); see paper Eq. (21).
 # Near-zero denominator handling is a floating-point convention.
 # =========================================================================
-@njit(cache=True, inline="always")
+@njit(inline="always")
 def _objective_numba(z, C, n0, n1, n2, d0, d1, d2, denom_tol):
     N = n0 + n1 * z + n2 * z * z
     D = d0 + d1 * z + d2 * z * z
@@ -256,7 +260,7 @@ def _objective_numba(z, C, n0, n1, n2, d0, d1, d2, denom_tol):
 # Solve the ratio-of-quadratics problem on a fixed support region:
 # endpoints plus real roots of N_S' D-N_S D'=0 (paper Lemma 3).
 # =========================================================================
-@njit(cache=True, inline="always")
+@njit(inline="always")
 def _best_ratio_candidate_numba(a, b, C, n0, n1, n2, d0, d1, d2, poly_tol, denom_tol):
     """Return the best endpoint/stationary candidate on [a,b]."""
     best_z = a
@@ -332,7 +336,7 @@ def _best_ratio_candidate_numba(a, b, C, n0, n1, n2, d0, d1, d2, poly_tol, denom
 # MATHEMATICAL GUIDE: _ma_inner_numba
 # Compute v.T M_A w from scalar sufficient statistics, no matrix M_A.
 # =========================================================================
-@njit(cache=True, inline="always")
+@njit(inline="always")
 def _ma_inner_numba(vv, v1, vx, w1, wx, g00, g01, g10, g11):
     return vv - (
         v1 * (g00 * w1 + g01 * wx)
@@ -356,7 +360,7 @@ def _ma_inner_numba(vv, v1, vx, w1, wx, g00, g01, g10, g11):
 # float64, sorting and tolerances, so 'exact' means finite-candidate
 # optimization numerically, not a formal exact-arithmetic guarantee.
 # =========================================================================
-@njit(cache=True)
+@njit
 def _solve_sparse_intervals_numba(
     x,
     valid_t,
@@ -841,7 +845,7 @@ def _solve_sparse_intervals_numba(
 # Fit is alpha_j+beta_j*x+delta_j*max(0,x-z*).
 # For unselected j set delta_j=0, giving a single OLS line.
 # =========================================================================
-@njit(cache=True)
+@njit
 def _recover_sparse_solution_numba(
     best_z,
     best_t,
@@ -1269,16 +1273,17 @@ def write_excel(path, x, Y, dates, tickers, result, timings, validation):
 # MATHEMATICAL GUIDE: main
 # Read saved (x,Y), run JIT warmup, optimize, optionally validate, export.
 # =========================================================================
+@threadpool_limits.wrap(limits=1)
 def main():
     parser = argparse.ArgumentParser(description="Optimize a saved simulated dataset and export Excel")
     parser.add_argument("--input", default="synthetic_stock_data.npz")
     parser.add_argument("--output", default="exact_sparse_results.xlsx")
     parser.add_argument("--k", type=int, default=None, help="Default: 20 percent of D")
-    parser.add_argument("--threads", type=int, default=None)
+    parser.add_argument("--threads", type=int, choices=(1,), default=1,
+                        help="Single-thread comparison; only 1 is supported")
     parser.add_argument("--skip-validation", action="store_true")
     args = parser.parse_args()
-    if args.threads is not None:
-        set_num_threads(args.threads)
+    set_num_threads(args.threads)
     with np.load(args.input, allow_pickle=False) as data:
         x = data["x"].copy()
         Y = data["Y"].copy()

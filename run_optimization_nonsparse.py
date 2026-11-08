@@ -1,8 +1,12 @@
 import argparse
+import os
 import time
 from pathlib import Path
+# Apple Accelerate is not controlled by threadpoolctl. Set before NumPy loads.
+os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
 import numpy as np
 from numba import njit, prange, get_num_threads, set_num_threads
+from threadpoolctl import threadpool_limits
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
@@ -760,15 +764,16 @@ def write_excel(path, x, Y, dates, tickers, result, warmup, validation_time, val
 # MATHEMATICAL GUIDE: main
 # Load simulated data, warm up, optimize dense model, validate and export.
 # =========================================================================
+@threadpool_limits.wrap(limits=1)
 def main():
     parser = argparse.ArgumentParser(description="Run non-sparse exact optimization on saved synthetic data")
     parser.add_argument("--input", default="synthetic_stock_data.npz")
     parser.add_argument("--output", default="exact_nonsparse_results.xlsx")
-    parser.add_argument("--threads", type=int, default=None)
+    parser.add_argument("--threads", type=int, choices=(1,), default=1,
+                        help="Single-thread comparison; only 1 is supported")
     parser.add_argument("--skip-validation", action="store_true")
     args = parser.parse_args()
-    if args.threads is not None:
-        set_num_threads(args.threads)
+    set_num_threads(args.threads)
     with np.load(args.input, allow_pickle=False) as data:
         x, Y = data["x"].copy(), data["Y"].copy()
         dates, tickers = data["dates"].copy(), data["tickers"].copy()
