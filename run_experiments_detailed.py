@@ -28,7 +28,7 @@ from run_optimization_nonsparse import warm_up_exact_numba
 from run_optimization_sparse import warm_up_numba_sparse_exact
 
 J_NONSPARSE = [10, 20, 100, 1000, 10000, 100000]
-J_SPARSE = [10, 20, 100, 1000, 10000]
+J_SPARSE = [10, 20, 100, 1000, 10000, 100000]
 BENCH_MAPPING = dict(minlp_status='status', minlp_incumbent_SSE='incumbent_SSE',
                      minlp_best_bound_SSE='best_bound_SSE', minlp_gap_percent='mip_gap_percent',
                      minlp_solver_runtime_seconds='solver_runtime_seconds',
