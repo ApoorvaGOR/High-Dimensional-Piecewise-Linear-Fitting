@@ -122,6 +122,6 @@ Software is covered by the [MIT license](LICENSE). Third-party data retain their
 
 We acknowledge the use of **OpenAI's ChatGPT and Codex** in assisting with the implementation, debugging, testing, documentation, and organization of the code in this repository.
 
-The **mathematical formulations, theoretical results, polynomial-time algorithms, and underlying optimization methodology** were independently derived and developed by the authors, **Apoorva Narula and Santanu S. Dey**. ChatGPT and Codex were used as software development assistants to translate these mathematical ideas into executable code and facilitate computational experiments.
+The **mathematical formulations, theoretical results, polynomial-time algorithms, and underlying optimization methodology** were independently derived and developed by the authors. ChatGPT and Codex were used as software development assistants to translate these mathematical ideas into executable code and facilitate computational experiments.
 
 The authors retain full responsibility for the mathematical correctness, implementation, validation, and reported computational results.
